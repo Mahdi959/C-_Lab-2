@@ -1,15 +1,17 @@
 // For this lab, you need to write the prototypes and definitions
 // for 2 functions, 'Swap' and 'larger', that are used in the main function
 // DO NOT CHANGE ANYTHING IN THE MAIN FUNCION
-// Also, replace these comments with Your Name, My name, the date and the lab
-// and change the name of this file to Lab2
+// Mahdi Ashrafee, Andrew, June 2, 2022
+
 
 
 #include<iostream>
 using namespace std;
 
 // function prototypes go here
-
+int Swap(int,int);
+int larger(int,int);
+//main
 int main()
 {
 	int *num1ptr, *num2ptr;
@@ -33,3 +35,10 @@ int main()
 }
 
 // function definitions go here
+int Swap(int first,int last){
+	int temp;
+	temp = first;
+	first = last;
+	last = temp;
+	
+}
