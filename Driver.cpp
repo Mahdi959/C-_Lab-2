@@ -9,8 +9,8 @@
 using namespace std;
 
 // function prototypes go here
-int Swap(int,int);
-int larger(int,int);
+void Swap(int*,int*);
+int* larger(int* first,int* last);
 //main
 int main()
 {
@@ -30,15 +30,23 @@ int main()
 	cout << "After Swapping, the values are " << *num1ptr << " and " << *num2ptr << endl;
 	
 									//the call the the 'larger' function
-	cout << "The larger of the 2 values is: " << *larger(num1ptr, num2ptr) << endl;
+	cout << "The larger of the 2 values is: " <<*larger(num1ptr, num2ptr) << endl;
 	return 0;
 }
 
 // function definitions go here
-int Swap(int first,int last){
+void Swap(int *first,int *last){
 	int temp;
-	temp = first;
-	first = last;
-	last = temp;
+	temp = *first;
+	*first = *last;
+	*last = temp;
+	
+}
+int* larger(int *first, int *last){
+
+	if(*first > *last)
+		return first;
+	else
+		return last;	
 	
 }
